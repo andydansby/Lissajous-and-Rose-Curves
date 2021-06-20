@@ -13,8 +13,8 @@ void onecoder_lissajous (void)
     while (1)
     {
 		t += 0.01;
-        calcX = (float)A * _oneCoder(a * t + delta);
-        calcY = (float)B * _oneCoder(b * t);
+        calcX = (float)A * _oneCoder_sin(a * t + delta);
+        calcY = (float)B * _oneCoder_sin(b * t);
         x = (int) calcX + x_offset;
         y = (int) calcY + y_offset;
 		plot(x, y);

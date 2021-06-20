@@ -46,3 +46,70 @@ printf ("4 -           r setting 37= %d", r_setting);
 printf ("\n");
 printf ("5 -           d setting 60= %d", d_setting);
 printf ("\n\n");
+
+
+
+
+
+
+
+
+void ROSE_S_Sine (void)
+{
+    float a = 0;
+    float d = d_setting;
+    float r = R_setting;//60
+    float calcX;
+    float calcY;
+    int x_offset = 128;//128
+    int y_offset = 86;//86
+    float radius = 60;
+
+    while (1)
+    {
+        radius = 60 * Q_cos(d * a);
+        calcX = radius * Q_cos (a + r);
+        calcY = radius * S_cos (a + r);
+
+        x = (int) calcX + x_offset;
+        y = (int) calcY + y_offset;
+		plot(x, y);
+
+        a = a + .01;
+        if (in_key_pressed( IN_KEY_SCANCODE_SPACE ))
+        {
+            break;
+        }
+    }
+}
+
+
+
+void ROSE_Q_Sine (void)
+{
+    float a = 0;
+    float d = d_setting;
+    float r = R_setting;//60
+    float calcX;
+    float calcY;
+    int x_offset = 128;//128
+    int y_offset = 86;//86
+    float radius = 60;
+
+    while (1)
+    {
+        radius = 60 * Q_cos(d * a);
+        calcX = radius * Q_cos (a + r);
+        calcY = radius * Q_cos (a + r);
+
+        x = (int) calcX + x_offset;
+        y = (int) calcY + y_offset;
+		plot(x, y);
+
+        a = a + .01;
+        if (in_key_pressed( IN_KEY_SCANCODE_SPACE ))
+        {
+            break;
+        }
+    }
+}

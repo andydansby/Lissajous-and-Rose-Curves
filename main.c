@@ -217,16 +217,16 @@ void options1 (void)
 		{
 		    zx_cls(PAPER_WHITE | INK_RED);
 			in_wait_nokey();
-			ROSE_TEST();//routine
+			ROSE_S_Sine();//routine
             in_wait_key();
             break;
 		}
 
-		if (in_key_pressed( IN_KEY_SCANCODE_s ))
+        if (in_key_pressed( IN_KEY_SCANCODE_s ))
 		{
 		    zx_cls(PAPER_WHITE | INK_RED);
 			in_wait_nokey();
-			ROSE_curious();//routine
+			ROSE_Q_Sine();//routine
             in_wait_key();
             break;
 		}
@@ -235,7 +235,7 @@ void options1 (void)
 		{
 		    zx_cls(PAPER_WHITE | INK_RED);
 			in_wait_nokey();
-			ROSE_curious2();//routine
+			ROSE_Hella_Sine();//routine
             in_wait_key();
             break;
 		}
@@ -244,10 +244,23 @@ void options1 (void)
 		{
 		    zx_cls(PAPER_WHITE | INK_RED);
 			in_wait_nokey();
-			ROSE_curious3();//routine
+			ROSE_Onecoder_Sine();//routine
             in_wait_key();
             break;
 		}
+
+
+
+    if (in_key_pressed( IN_KEY_SCANCODE_h ))
+		{
+		    zx_cls(PAPER_WHITE | INK_RED);
+			in_wait_nokey();
+			//Epitrochoid_Rose();//routine
+            in_wait_key();
+            break;
+		}
+
+
 
         //ROSE_TEST (void)
         if (in_key_pressed( IN_KEY_SCANCODE_z ))
@@ -255,6 +268,24 @@ void options1 (void)
 		    zx_cls(PAPER_WHITE | INK_RED);
 			in_wait_nokey();
 			ROSE_curious();//routine
+            in_wait_key();
+            break;
+		}
+
+		if (in_key_pressed( IN_KEY_SCANCODE_x ))
+		{
+		    zx_cls(PAPER_WHITE | INK_RED);
+			in_wait_nokey();
+			ROSE_curious2();//routine
+            in_wait_key();
+            break;
+		}
+
+		if (in_key_pressed( IN_KEY_SCANCODE_c ))
+		{
+		    zx_cls(PAPER_WHITE | INK_RED);
+			in_wait_nokey();
+			ROSE_curious3();//routine
             in_wait_key();
             break;
 		}
@@ -290,7 +321,7 @@ void printOptions (void)
         printf ("\n");
         printf ("R- Lissajous QSIN estimate");
         printf ("\n");
-        printf ("R- Lissajous Hella Sine estimate");
+        printf ("T- Lissajous Hella Sine estimate");
 
         printf ("\n\n");
 
@@ -298,7 +329,10 @@ void printOptions (void)
         printf ("\n");
 		printf ("4 -           d setting (3)= %d", d_setting);
 		printf ("\n\n");
-        printf ("A- ROSE Curve");
+        printf ("A-D ROSE Curve");
+        printf ("\n");
+
+        printf ("Z -- ROSE Curious");
         printf ("\n\n\n");
         printf ("Press SPACE to STOP drawing");
     }

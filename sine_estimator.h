@@ -34,7 +34,7 @@ float S_sine(float xx)
 	return xxx * (B + ABS(xxx));
 }
 
-float _oneCoder (float xx)
+float _oneCoder_sin (float xx)
 {
 	xx = xx * 0.15915;
 	xx = xx - floor (xx);
@@ -93,9 +93,9 @@ float S_cos (float xx)
 	return S_sine(xx + PI / 2);
 }
 
-float _onecoder_cosine (float xx)
+float _onecoder_cos (float xx)
 {
-	return _oneCoder(xx + PI / 2);
+	return _oneCoder_sin(xx + PI / 2);
 }
 
 float Q_cos (float xx)
